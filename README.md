@@ -31,13 +31,13 @@
 # AppKit?
 일반적으로 AppKit이라고 하는 Application Kit는 NeXTSTEP의 그래픽 사용자 인터페이스 툴킷 입니다. Foundation 및 Display PostScript 와 함께 OpenStep API 사양의 핵심 부분 중 하나입니다. macOS와 함께 번들로 제공되는 대부분의 응용 프로그램 (예 : Finder , TextEdit , Calendar 및 Preview)은 AppKit을 사용하여 사용자 인터페이스를 제공합니다.
 
-# int mlx_loop(void *mlx_ptr);
+- int mlx_loop(void *mlx_ptr);
 프로그램을 종료 시키지 않고 계속돌아가게 한다.
 
-# int mlx_loop_hook(void *mlx_ptr, int (*funct_ptr)(), void *param);
+- int mlx_loop_hook(void *mlx_ptr, int (*funct_ptr)(), void *param);
 아무 입력이 없을 때 loop를 돌리는 함수, 현재위치를 기반으로 화면을 매번 새로 그린다.
 
-# int mlx_hook(void *win_ptr, int x_event, int x_mask, int (*funct)(), void *param);
+- int mlx_hook(void *win_ptr, int x_event, int x_mask, int (*funct)(), void *param);
 모든 입력을 처리하는 x_event값에 따라 key_press, key_release, mouse클릭, 창닫기버튼 등 입력을 받을 수있음.
 
 # Mac key code
@@ -53,6 +53,3 @@
 
 # Minilibx 라이브러리
 - https://yeosong1.github.io/miniRT%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC
-
-# init_game_tex 5개 이미지사용
-# texel: pixel은 2차원 texel은 3차원
