@@ -6,7 +6,7 @@
 /*   By: hyunkim <hyunkim@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 21:39:18 by hyunkim           #+#    #+#             */
-/*   Updated: 2021/02/10 07:33:36 by hyunkim          ###   ########.fr       */
+/*   Updated: 2021/02/26 19:40:00 by hyunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ t_win	*init_game_window_pone(void)
 	win->m_start_space = 0;
 	return (win);
 }
-//맵초기화설정??
 
 int		init_game_tex(t_win *win, int n)
 {
