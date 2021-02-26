@@ -6,7 +6,7 @@
 /*   By: hyunkim <hyunkim@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 21:50:56 by hyunkim           #+#    #+#             */
-/*   Updated: 2021/02/10 07:02:17 by hyunkim          ###   ########.fr       */
+/*   Updated: 2021/02/26 21:29:07 by hyunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	hit(t_ray *ray, t_win *win)
 		predict_wall_face(ray);
 		if (win->map->map[ray->mapy][ray->mapx] > '0'
 				&& win->map->map[ray->mapy][ray->mapx] != '2')
-				ray->hit = 1;
+			ray->hit = 1;
 		else if (win->map->map[ray->mapy][ray->mapx] == '2')
-				is_sprite(ray, win);
+			is_sprite(ray, win);
 	}
 }
 

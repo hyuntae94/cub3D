@@ -6,7 +6,7 @@
 /*   By: hyunkim <hyunkim@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 16:13:01 by hyunkim           #+#    #+#             */
-/*   Updated: 2021/02/16 16:12:24 by hyunkim          ###   ########.fr       */
+/*   Updated: 2021/02/26 21:29:25 by hyunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int		main(int argc, char **argv)
 			|| !init_game_sprite(win) || !init_game_map(win, argv[1])
 			|| !init_game_keybuffer(win) || !init_game_player(win)
 			|| !init_game_window_ptwo(win))
-			show_error(1, win, "");
+		show_error(1, win, "");
 	need_save(win, argv);
 	mlx_hook(win->win_ptr, 2, 1L << 0, event_key_pressed, win);
 	mlx_hook(win->win_ptr, 3, 1L << 1, event_key_released, win);

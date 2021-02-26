@@ -6,7 +6,7 @@
 /*   By: hyunkim <hyunkim@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 13:01:16 by hyunkim           #+#    #+#             */
-/*   Updated: 2021/02/10 07:02:43 by hyunkim          ###   ########.fr       */
+/*   Updated: 2021/02/26 21:29:47 by hyunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ t_sprite		*list_to_tab(t_win *win)
 	count = -1;
 	if (!(rtn = malloc(sizeof(t_sprite)
 			* ft_lstsize((t_list *)win->spr_screen))))
-			return (ERROR);
+		return (ERROR);
 	ft_bzero(rtn, sizeof(t_sprite)
 			* ft_lstsize((t_list *)win->spr_screen));
 	while (++count > -1)
@@ -49,7 +49,7 @@ t_sprite		*list_to_tab(t_win *win)
 			rtn[count].y = win->spr_screen->y;
 		}
 		if (win->spr_screen->next)
-				win->spr_screen = win->spr_screen->next;
+			win->spr_screen = win->spr_screen->next;
 		else
 			break ;
 	}

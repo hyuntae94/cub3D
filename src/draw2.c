@@ -6,7 +6,7 @@
 /*   By: hyunkim <hyunkim@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 00:39:36 by hyunkim           #+#    #+#             */
-/*   Updated: 2021/02/09 08:15:45 by hyunkim          ###   ########.fr       */
+/*   Updated: 2021/02/26 21:20:04 by hyunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,18 @@ void	predict_wall_face(t_ray *ray)
 
 void	next_sprite(t_sprites *actual, t_sprites *new, t_ray *ray)
 {
-	while(1)
+	while (1)
 	{
 		if (actual->x == ray->mapx && actual->y == ray->mapy)
 		{
 			free(new);
-			break;
+			break ;
 		}
 		if ((actual->x != ray->mapx || actual->y != ray->mapy)
 				&& !actual->next)
 		{
 			actual->next = new;
-			break;
+			break ;
 		}
 		if (actual->next)
 			actual = actual->next;

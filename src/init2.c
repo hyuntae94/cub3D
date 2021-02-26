@@ -6,7 +6,7 @@
 /*   By: hyunkim <hyunkim@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 10:30:47 by hyunkim           #+#    #+#             */
-/*   Updated: 2021/02/08 19:29:08 by hyunkim          ###   ########.fr       */
+/*   Updated: 2021/02/26 21:19:21 by hyunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ t_image		*new_image(t_win *win, int width, int height)
 	ft_bzero(img, sizeof(t_image));
 	if (!(img->img_ptr = mlx_new_image(win->mlx_ptr, width, height)))
 		return (NULL);
-	img->data = mlx_get_data_addr(img->img_ptr, &img->bpp, &img->size_line, &img->endian);
+	img->data = mlx_get_data_addr(img->img_ptr, &img->bpp,
+		&img->size_line, &img->endian);
 	img->width = width;
 	img->height = height;
 	return (img);
@@ -55,7 +56,7 @@ int			init_game_window_ptwo(t_win *win)
 		free(map);
 		return (ERROR);
 	}
-	win->map->map = read_map2(map,win);
+	win->map->map = read_map2(map, win);
 	if (!(win->win_ptr = mlx_new_window(win->mlx_ptr,
 			win->width, win->height, "cub3d")))
 		return (ERROR);

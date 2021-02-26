@@ -6,7 +6,7 @@
 /*   By: hyunkim <hyunkim@student.42.kr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 08:16:23 by hyunkim           #+#    #+#             */
-/*   Updated: 2021/02/09 12:59:05 by hyunkim          ###   ########.fr       */
+/*   Updated: 2021/02/26 21:21:41 by hyunkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,16 @@ void	texture_on_img(t_line *line, t_image *texture, t_win *win, t_ray *ray)
 	line->tex_y = ((d * texture->height) / ray->line_height)
 			/ texture->size_line;
 	win->img->data[line->y * win->img->size_line + line->x
-									* win->img->bpp / 8] = texture->data[line->tex_y
-									* texture->size_line + line->tex_x * (texture->bpp / 8)];
+		* win->img->bpp / 8] = texture->data[line->tex_y
+		* texture->size_line + line->tex_x * (texture->bpp / 8)];
 	win->img->data[line->y * win->img->size_line + line->x
-									* win->img->bpp / 8 + 1] = texture->data[line->tex_y
-									* texture->size_line + line->tex_x * (texture->bpp / 8)
-									+ 1];
+		* win->img->bpp / 8 + 1] = texture->data[line->tex_y
+		* texture->size_line + line->tex_x * (texture->bpp / 8)
+		+ 1];
 	win->img->data[line->y * win->img->size_line + line->x
-									* win->img->bpp / 8 + 2] = texture->data[line->tex_y
-									* texture->size_line + line->tex_x * (texture->bpp / 8)
-									+ 2];
+		* win->img->bpp / 8 + 2] = texture->data[line->tex_y
+		* texture->size_line + line->tex_x * (texture->bpp / 8)
+		+ 2];
 }
 
 void	ver_line_tex_img(t_line *l, t_win *win, t_image *tex, t_ray *ray)
